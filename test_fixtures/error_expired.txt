@@ -1,0 +1,35 @@
+Jul 10 10:22:09 srv24-s-st postfix/smtpd[1730]: D9E6CDF04A5: client=unknown[212.46.210.6], sasl_method=LOGIN, sasl_username=tduds@wmess.ru
+Jul 10 10:22:10 srv24-s-st postfix/cleanup[18031]: D9E6CDF04A5: message-id=<20120710062209.D9E6CDF04A5@smtp.jino.ru>
+Jul 10 10:22:12 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: from=<tduds@wmess.ru>, size=172491, nrcpt=1 (queue active)
+Jul 10 10:22:52 srv24-s-st postfix/smtp[22685]: D9E6CDF04A5: to=<kudlenok@gogres.ru>, relay=none, delay=43, delays=3.1/0/40/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=gogres.ru type=MX: Host not found, try again)
+Jul 10 10:52:33 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: from=<tduds@wmess.ru>, size=172491, nrcpt=1 (queue active)
+Jul 10 10:53:13 srv24-s-st postfix/smtp[31376]: D9E6CDF04A5: to=<kudlenok@gogres.ru>, relay=none, delay=1864, delays=1823/0.31/40/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=gogres.ru type=MX: Host not found, try again)
+Jul 10 11:25:53 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: from=<tduds@wmess.ru>, size=172491, nrcpt=1 (queue active)
+Jul 10 11:26:33 srv24-s-st postfix/smtp[8702]: D9E6CDF04A5: to=<kudlenok@gogres.ru>, relay=none, delay=3864, delays=3824/0.24/40/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=gogres.ru type=MX: Host not found, try again)
+Jul 10 12:32:33 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: from=<tduds@wmess.ru>, size=172491, nrcpt=1 (queue active)
+Jul 10 12:33:13 srv24-s-st postfix/smtp[5724]: D9E6CDF04A5: to=<kudlenok@gogres.ru>, relay=none, delay=7864, delays=7824/0.33/40/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=gogres.ru type=MX: Host not found, try again)
+Jul 10 13:55:53 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: from=<tduds@wmess.ru>, size=172491, nrcpt=1 (queue active)
+Jul 10 13:56:33 srv24-s-st postfix/smtp[26748]: D9E6CDF04A5: to=<kudlenok@gogres.ru>, relay=none, delay=12864, delays=12824/0.25/40/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=gogres.ru type=MX: Host not found, try again)
+Jul 10 15:19:13 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: from=<tduds@wmess.ru>, size=172491, nrcpt=1 (queue active)
+Jul 10 15:19:53 srv24-s-st postfix/smtp[21827]: D9E6CDF04A5: to=<kudlenok@gogres.ru>, relay=none, delay=17864, delays=17824/0.24/40/0, dsn=4.4.3, status=deferred (Host or domain name not found. Name service error for name=gogres.ru type=MX: Host not found, try again)
+Jul 10 15:19:53 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: from=<tduds@wmess.ru>, status=expired, returned to sender
+Jul 10 15:19:53 srv24-s-st postfix/bounce[26396]: D9E6CDF04A5: sender non-delivery notification: B13FEDF0400
+Jul 10 15:19:53 srv24-s-st postfix/qmgr[3043]: D9E6CDF04A5: removed
+
+Jul 10 10:30:41 srv24-s-st postfix/smtpd[24017]: 7048DDF05A3: client=unknown[212.46.210.6], sasl_method=LOGIN, sasl_username=tduds@wmess.ru
+Jul 10 10:30:41 srv24-s-st postfix/cleanup[6471]: 7048DDF05A3: message-id=<20120710063041.7048DDF05A3@smtp.jino.ru>
+Jul 10 10:30:44 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: from=<tduds@wmess.ru>, size=172500, nrcpt=1 (queue active)
+Jul 10 10:32:15 srv24-s-st postfix/smtp[22673]: 7048DDF05A3: to=<l_invest@yugorsk.ru>, relay=none, delay=94, delays=3/0/91/0, dsn=4.4.1, status=deferred (connect to yugorsk.ru[193.232.159.145]: No route to host)
+Jul 10 10:52:33 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: from=<tduds@wmess.ru>, size=172500, nrcpt=1 (queue active)
+Jul 10 10:54:33 srv24-s-st postfix/smtp[22673]: 7048DDF05A3: to=<l_invest@yugorsk.ru>, relay=none, delay=1432, delays=1312/0.01/120/0, dsn=4.4.1, status=deferred (connect to yugorsk.ru[193.232.158.144]: Connection timed out)
+Jul 10 11:25:53 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: from=<tduds@wmess.ru>, size=172500, nrcpt=1 (queue active)
+Jul 10 11:27:53 srv24-s-st postfix/smtp[8623]: 7048DDF05A3: to=<l_invest@yugorsk.ru>, relay=none, delay=3432, delays=3312/0.05/120/0, dsn=4.4.1, status=deferred (connect to yugorsk.ru[193.232.158.144]: Connection timed out)
+Jul 10 12:32:33 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: from=<tduds@wmess.ru>, size=172500, nrcpt=1 (queue active)
+Jul 10 12:34:33 srv24-s-st postfix/smtp[5635]: 7048DDF05A3: to=<l_invest@yugorsk.ru>, relay=none, delay=7432, delays=7312/0.03/120/0, dsn=4.4.1, status=deferred (connect to yugorsk.ru[193.232.158.144]: Connection timed out)
+Jul 10 13:55:53 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: from=<tduds@wmess.ru>, size=172500, nrcpt=1 (queue active)
+Jul 10 13:57:54 srv24-s-st postfix/smtp[26674]: 7048DDF05A3: to=<l_invest@yugorsk.ru>, relay=none, delay=12433, delays=12312/0.04/121/0, dsn=4.4.1, status=deferred (connect to yugorsk.ru[193.232.158.145]: Connection timed out)
+Jul 10 15:19:13 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: from=<tduds@wmess.ru>, size=172500, nrcpt=1 (queue active)
+Jul 10 15:21:13 srv24-s-st postfix/smtp[19397]: 7048DDF05A3: to=<l_invest@yugorsk.ru>, relay=none, delay=17432, delays=17312/0/120/0, dsn=4.4.1, status=deferred (connect to yugorsk.ru[193.232.159.145]: Connection timed out)
+Jul 10 15:21:13 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: from=<tduds@wmess.ru>, status=expired, returned to sender
+Jul 10 15:21:13 srv24-s-st postfix/bounce[22965]: 7048DDF05A3: sender non-delivery notification: AC335DF0448
+Jul 10 15:21:13 srv24-s-st postfix/qmgr[3043]: 7048DDF05A3: removed

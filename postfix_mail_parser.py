@@ -1,8 +1,7 @@
 # Парсер для логов Postfix
 # Для каждого отправителя - т.е. адреса email - учитываем письма, которые ему удалось / не удалось отправить
-import re
 import json
-import unittest
+from config import patterns, log_filename, senders_filename
 
 
 def parse_postfix_log(log_file, text_patterns):
@@ -10,15 +9,35 @@ def parse_postfix_log(log_file, text_patterns):
     Функция, получающая на вход итератор-текстовый файл и список паттернов в виде словаря регулярных выражений.
     Выдает словарь со статистикой отправлений.
     """
-    mail_id_pattern, sender_pattern, recepient_pattern = patterns['mail_id'], patterns['sender'], patterns['recepient']
-    mail_status_pattern, noqueue_pattern, removed_pattern = patterns['mail_status'], patterns['noqueue'], patterns['removed']
+    mail_id_pattern     = text_patterns['mail_id']
+    sender_pattern      = text_patterns['sender'] 
+    recepient_pattern   = text_patterns['recepient']
+    mail_status_pattern = text_patterns['mail_status'] 
+    noqueue_pattern     = text_patterns['noqueue']
+    removed_pattern     = text_patterns['removed']
 
-    id_table = {}   # активные id писем
-    senders = {}    # список отправителей
+    # активные id писем, словарь вида { <ID>: {
+    #                                   'from': <from_email>, 
+    #                                    'to': <to_email> 
+    #                                         }, ...,  
+    #                                 }
+    id_table = {}
+
+    # Выход функции:
+    # список отправителей, cловарь вида { <from_email>: 
+    #                                       {'delivered': a, 
+    #                                        'failed': b, 
+    #                                        'recipients': [email1, email2, ...] 
+    #                                       }, ...,
+    #                                   }
+    senders = {}
+
 
     for line in log_file:
+
+        # Если строка содержит ID письма, обрабатываем ее, иначе - игнорируем
         id_match = mail_id_pattern.search(line)
-        if id_match:    # Обрабатываем строку, если она содержит ID письма
+        if id_match:
 
             mail_id = id_match[1]
             if mail_id not in id_table:
@@ -34,8 +53,9 @@ def parse_postfix_log(log_file, text_patterns):
                 status_match = mail_status_pattern.search(line)
                 if status_match and status_match[1] == 'expired':
                     senders[from_email]['failed'] += 1
+                    del id_table[mail_id] # Удаление ID письма из очереди
 
-            # else: # Можно обработать случаи пустого или некорректного from:, посчитал ненужным
+            # else: # Можно обработать случаи некорректного from:
 
             to_match = recepient_pattern.search(line)
             if to_match:    # Если строка содержит поле to
@@ -49,17 +69,16 @@ def parse_postfix_log(log_file, text_patterns):
                 if status_match and status_match[1] == 'sent':  # Если письмо отправлено
                     if from_email not in senders:
                         senders[from_email] = {'delivered': 0, 'failed': 0, 'recipients': []}
-
                     senders[from_email]['delivered'] += 1
                     senders[from_email]['recipients'].append(to_email)
 
                 elif status_match and status_match[1] == 'bounced': # Если письмо отфутболено
                     senders[from_email]['failed'] += 1
 
-            # else: # Можно обработать случай некорректного to:, посчитал ненужным
+            # else: # Можно обработать случаи некорректного to:
 
             removed_match = removed_pattern.search(line)
-            if removed_match: # Добавим удаление ID из очереди после обработки
+            if removed_match: # Удаление ID письма из очереди после обработки
                 del id_table[mail_id]
 
         else:   # Отдельно обрабатывается случай, когда видим NOQUEUE вместо ID
@@ -77,28 +96,15 @@ def parse_postfix_log(log_file, text_patterns):
 
 def postfix_log_to_json(senders_obj, file):
     """
-    Функция, отправляющая словарь со статистикой в json файл
+    Функция, отправляющая словарь со статистикой в json
     """
-    outfile = open(file,"w")
+    outfile = open(file, "w")
     json_object = json.dumps(senders_obj, sort_keys=True, indent=4)
     print(json_object, file=outfile)
     outfile.close()
 
 
-log = open("mlog","r")
+with open(log_filename, "r") as log:
+    log_statistics = parse_postfix_log(log, patterns)
 
-patterns = {'mail_id': re.compile(r'postfix\/\w{3,7}\[\d{3,6}\]: ([0-9A-F]{11}):'),
-            'sender': re.compile(r'from=<?([0-9A-Za-z._%+-]+@[0-9A-Za-z._-]+\.\w{2,5})>?'),
-            'recepient': re.compile(r' to=<?([0-9A-Za-z._%+-]+@[0-9A-Za-z._-]+\.\w{2,5})>?'),
-            'mail_status': re.compile(r'status=([a-z]{3,9})'),
-            'noqueue': re.compile(r'NOQUEUE'),
-            'removed': re.compile(r': removed'),
-            'empty_from': '',
-            'wrong_from': '',
-            'wrong_to': ''
-}
-
-log_statistics = parse_postfix_log(log, patterns)
-log.close()
-
-postfix_log_to_json(senders_obj=log_statistics, file="senders.json")
+postfix_log_to_json(senders_obj=log_statistics, file=senders_filename)

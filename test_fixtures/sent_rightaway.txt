@@ -1,0 +1,25 @@
+# Примеры писем, которые удалось отправить немедленно
+
+Jul 10 10:09:28 srv24-s-st postfix/smtpd[27067]: 64C08DF04EF: client=unknown[109.126.10.42], sasl_method=PLAIN, sasl_username=t.ivanova@dalvl.ru
+Jul 10 10:09:28 srv24-s-st postfix/cleanup[28840]: 64C08DF04EF: message-id=<4FFBC5F0.1050603@dalvl.ru>
+Jul 10 10:09:30 srv24-s-st postfix/qmgr[3043]: 64C08DF04EF: from=<t.ivanova@dalvl.ru>, size=286786, nrcpt=1 (queue active)
+Jul 10 10:09:30 srv24-s-st postfix/smtp[23225]: 64C08DF04EF: to=<elena_buh@krovinfo.ru>, relay=mail.krovinfo.ru[81.177.6.243]:25, delay=2, delays=1.8/0/0.04/0.16, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 5A3133862BD)
+Jul 10 10:09:30 srv24-s-st postfix/qmgr[3043]: 64C08DF04EF: removed
+
+Jul 10 10:09:18 srv24-s-st postfix/smtpd[5486]: F1DB8DF04EF: client=n53-h187.gw-net.metromax.ru[81.22.53.187], sasl_method=PLAIN, sasl_username=oksana_b@kubometr-samara.ru
+Jul 10 10:09:19 srv24-s-st postfix/cleanup[6537]: F1DB8DF04EF: message-id=<4FFBC6F0.2080809@kubometr-samara.ru>
+Jul 10 10:09:19 srv24-s-st postfix/qmgr[3043]: F1DB8DF04EF: from=<oksana_b@kubometr-samara.ru>, size=11263, nrcpt=1 (queue active)
+Jul 10 10:09:20 srv24-s-st postfix/smtp[22635]: F1DB8DF04EF: to=<ninachekmeneva@mail.ru>, relay=mxs.mail.ru[94.100.176.20]:25, delay=1.3, delays=0.76/0/0.02/0.49, dsn=2.0.0, status=sent (250 OK id=1SoTcu-0003aF-80)
+Jul 10 10:09:20 srv24-s-st postfix/qmgr[3043]: F1DB8DF04EF: removed
+
+Jul 10 10:09:33 srv24-s-st postfix/smtpd[4703]: 5BF38DF0503: client=unknown[83.242.245.18], sasl_method=PLAIN, sasl_username=VolodinV@echoavto.ru
+Jul 10 10:09:33 srv24-s-st postfix/cleanup[6471]: 5BF38DF0503: message-id=<4FFBC810.4010808@echoavto.ru>
+Jul 10 10:09:33 srv24-s-st postfix/qmgr[3043]: 5BF38DF0503: from=<VolodinV@echoavto.ru>, size=4715, nrcpt=1 (queue active)
+Jul 10 10:09:33 srv24-s-st postfix/smtp[6782]: 5BF38DF0503: to=<e.baklagenko@echoauto.ru>, relay=mail.echoauto.ru[81.177.140.223]:25, delay=0.49, delays=0.43/0/0.01/0.05, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as 33B3F39A19A)
+Jul 10 10:09:33 srv24-s-st postfix/qmgr[3043]: 5BF38DF0503: removed
+
+Jul 10 10:09:40 srv24-s-st postfix/smtpd[16079]: A778BDF0504: client=unknown[178.207.153.126], sasl_method=CRAM-MD5, sasl_username=sklad@cement116.ru
+Jul 10 10:09:40 srv24-s-st postfix/cleanup[6537]: A778BDF0504: message-id=<584486145.20120710100908@cement116.ru>
+Jul 10 10:09:40 srv24-s-st postfix/qmgr[3043]: A778BDF0504: from=<sclad@cement116.ru>, size=731, nrcpt=1 (queue active)
+Jul 10 10:09:40 srv24-s-st postfix/smtp[22638]: A778BDF0504: to=<cembaza@mail.ru>, relay=mxs.mail.ru[94.100.176.20]:25, delay=0.28, delays=0.07/0/0.01/0.2, dsn=2.0.0, status=sent (250 OK id=1SoTdF-0008G5-C1)
+Jul 10 10:09:40 srv24-s-st postfix/qmgr[3043]: A778BDF0504: removed

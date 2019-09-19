@@ -1,0 +1,23 @@
+# Письмо не доставлено, т.к. не найден адрес реципиента, и автору отфутболивают его же письмо
+
+Jul 10 10:09:21 srv24-s-st postfix/qmgr[3043]: 718F4DF04E9: from=<krasteplokomplekt@yandex.ru>, size=617940, nrcpt=1 (queue active)
+Jul 10 10:09:21 srv24-s-st postfix/smtp[6782]: 718F4DF04E9: to=<arsenya08@mail.ru>, relay=mxs.mail.ru[94.100.176.20]:25, delay=21, delays=21/0/0.02/0.14, dsn=5.0.0, status=bounced (host mxs.mail.ru[94.100.176.20] said: 550 Message was not accepted -- invalid mailbox.  Local mailbox arsenya08@mail.ru is unavailable: user not found (in reply to end of DATA command))
+Jul 10 10:09:21 srv24-s-st postfix/bounce[24126]: 718F4DF04E9: sender non-delivery notification: D69F5DF04F4
+Jul 10 10:09:21 srv24-s-st postfix/qmgr[3043]: 718F4DF04E9: removed
+
+Jul 10 10:09:21 srv24-s-st postfix/cleanup[8898]: D69F5DF04F4: message-id=<20120710060921.D69F5DF04F4@smtp.jino.ru>
+Jul 10 10:09:21 srv24-s-st postfix/qmgr[3043]: D69F5DF04F4: from=<>, size=3104, nrcpt=1 (queue active)
+Jul 10 10:09:22 srv24-s-st postfix/smtp[22635]: D69F5DF04F4: host mx.yandex.ru[213.180.204.89] said: 451 4.7.1 Sorry, the service is currently unavailable. Please come back later. 8ohqT2RI-8ohqQZ6F (in reply to end of DATA command)
+Jul 10 10:09:22 srv24-s-st postfix/smtp[22635]: D69F5DF04F4: to=<krasteplokomplekt@yandex.ru>, relay=mx.yandex.ru[213.180.193.89]:25, delay=0.26, delays=0/0/0.21/0.05, dsn=4.7.1, status=deferred (host mx.yandex.ru[213.180.193.89] said: 451 4.7.1 Sorry, the service is currently unavailable. Please come back later. 8o4KRFlt-8o4Kls3x (in reply to end of DATA command))
+Jul 10 10:35:53 srv24-s-st postfix/qmgr[3043]: D69F5DF04F4: from=<>, size=3104, nrcpt=1 (queue active)
+Jul 10 10:35:54 srv24-s-st postfix/smtp[29350]: D69F5DF04F4: to=<krasteplokomplekt@yandex.ru>, relay=mx.yandex.ru[77.88.21.89]:25, delay=1593, delays=1592/0.74/0.05/0.54, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued on mxfront10.mail.yandex.net as ZM3ipNCH-ZM30qH20)
+Jul 10 10:35:54 srv24-s-st postfix/qmgr[3043]: D69F5DF04F4: removed
+
+# Письмо не доставлено, т.к. не найден хост реципиента
+
+Jul 10 10:10:38 srv24-s-st postfix/smtpd[16080]: 07F1FDF050F: client=unknown[85.26.204.66], sasl_method=LOGIN, sasl_username=r.ismiev@energomost-group.ru
+Jul 10 10:10:38 srv24-s-st postfix/cleanup[28740]: 07F1FDF050F: message-id=<000301cd5e62$a6c9ee70$f45dcb50$@ismiev@energomost-group.ru>
+Jul 10 10:10:45 srv24-s-st postfix/qmgr[3043]: 07F1FDF050F: from=<r.ismiev@energomost-group.ru>, size=279733, nrcpt=1 (queue active)
+Jul 10 10:10:46 srv24-s-st postfix/smtp[22650]: 07F1FDF050F: to=<i.a.stavtseva@enegromost-group.ru>, relay=none, delay=8.3, delays=7.9/0/0.4/0, dsn=5.4.4, status=bounced (Host or domain name not found. Name service error for name=enegromost-group.ru type=AAAA: Host not found)
+Jul 10 10:10:46 srv24-s-st postfix/bounce[24126]: 07F1FDF050F: sender non-delivery notification: 33CF3DF050B
+Jul 10 10:10:46 srv24-s-st postfix/qmgr[3043]: 07F1FDF050F: removed

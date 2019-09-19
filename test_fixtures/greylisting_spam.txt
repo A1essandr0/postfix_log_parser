@@ -1,0 +1,17 @@
+Jul 10 10:09:39 srv24-s-st postfix/smtpd[21624]: BF707DF04E1: client=unknown[213.87.122.107], sasl_method=LOGIN, sasl_username=manager30@moda-milena.ru
+Jul 10 10:09:42 srv24-s-st postfix/cleanup[6042]: BF707DF04E1: message-id=<20120710060939.BF707DF04E1@smtp.jino.ru>
+Jul 10 10:10:05 srv24-s-st postfix/qmgr[3043]: BF707DF04E1: from=<krasteplokomplekt@yandex.ru>, size=617942, nrcpt=1 (queue active)
+Jul 10 10:10:06 srv24-s-st postfix/smtp[22621]: BF707DF04E1: host relay1.krasnet.ru[195.112.224.91] said: 451 4.7.1 Greylisting in action, please come back later (in reply to RCPT TO command)
+Jul 10 10:10:08 srv24-s-st postfix/smtp[22621]: BF707DF04E1: to=<arshush@krasmail.ru>, relay=hub.krasnet.ru[195.112.224.125]:25, delay=29, delays=26/0/2.2/0.9, dsn=4.7.1, status=deferred (host hub.krasnet.ru[195.112.224.125] said: 451 4.7.1 Greylisting in action, please come back later (in reply to RCPT TO command))
+Jul 10 10:35:53 srv24-s-st postfix/qmgr[3043]: BF707DF04E1: from=<krasteplokomplekt@yandex.ru>, size=617942, nrcpt=1 (queue active)
+Jul 10 10:35:57 srv24-s-st postfix/smtp[29348]: BF707DF04E1: to=<arshush@krasmail.ru>, relay=relay1.krasnet.ru[195.112.224.91]:25, delay=1578, delays=1574/0.05/0.63/3.4, dsn=5.7.1, status=bounced (host relay1.krasnet.ru[195.112.224.91] said: 554 5.7.1 Spam message rejected; If this is not spam contact abuse at krasnet.ru (in reply to end of DATA command))
+Jul 10 10:35:57 srv24-s-st postfix/bounce[6900]: BF707DF04E1: sender non-delivery notification: 83AF6DF03F2
+Jul 10 10:35:57 srv24-s-st postfix/qmgr[3043]: BF707DF04E1: removed
+
+Jul 10 10:35:57 srv24-s-st postfix/cleanup[14727]: 83AF6DF03F2: message-id=<20120710063557.83AF6DF03F2@smtp.jino.ru>
+Jul 10 10:35:57 srv24-s-st postfix/qmgr[3043]: 83AF6DF03F2: from=<>, size=3061, nrcpt=1 (queue active)
+Jul 10 10:35:57 srv24-s-st postfix/smtp[29365]: 83AF6DF03F2: host mx.yandex.ru[213.180.204.89] said: 451 4.7.1 Sorry, the service is currently unavailable. Please come back later. ZQTq3dQL-ZQTGjwCD (in reply to end of DATA command)
+Jul 10 10:35:57 srv24-s-st postfix/smtp[29365]: 83AF6DF03F2: to=<krasteplokomplekt@yandex.ru>, relay=mx.yandex.ru[213.180.193.89]:25, delay=0.4, delays=0.01/0/0.34/0.05, dsn=4.7.1, status=deferred (host mx.yandex.ru[213.180.193.89] said: 451 4.7.1 Sorry, the service is currently unavailable. Please come back later. ZQUa0LgX-ZQUiBFEu (in reply to end of DATA command))
+Jul 10 11:09:13 srv24-s-st postfix/qmgr[3043]: 83AF6DF03F2: from=<>, size=3061, nrcpt=1 (queue active)
+Jul 10 11:09:15 srv24-s-st postfix/smtp[1437]: 83AF6DF03F2: to=<krasteplokomplekt@yandex.ru>, relay=mx.yandex.ru[77.88.21.89]:25, conn_use=2, delay=1997, delays=1996/0.97/0.01/0.85, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued on mxfront8.mail.yandex.net as 8gHKjvQu-8gHKLu5L)
+Jul 10 11:09:15 srv24-s-st postfix/qmgr[3043]: 83AF6DF03F2: removed

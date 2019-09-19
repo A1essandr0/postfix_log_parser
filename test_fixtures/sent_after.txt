@@ -1,0 +1,27 @@
+# Отправленные со второй попытки
+
+Jul 10 10:09:32 srv24-s-st postfix/smtpd[10620]: 74A3FDF0502: client=unknown[213.87.122.107], sasl_method=LOGIN, sasl_username=manager30@moda-milena.ru
+Jul 10 10:09:33 srv24-s-st postfix/cleanup[28750]: 74A3FDF0502: message-id=<20120710060932.74A3FDF0502@smtp.jino.ru>
+Jul 10 10:09:50 srv24-s-st postfix/qmgr[3043]: 74A3FDF0502: from=<krasteplokomplekt@yandex.ru>, size=617938, nrcpt=1 (queue active)
+Jul 10 10:09:51 srv24-s-st postfix/smtp[22639]: 74A3FDF0502: host imx1.rambler.ru[81.19.66.235] said: 452 4.7.1 Try again later (in reply to DATA command)
+Jul 10 10:09:52 srv24-s-st postfix/smtp[22639]: 74A3FDF0502: to=<arsez24@rambler.ru>, relay=imx1.rambler.ru[81.19.66.234]:25, delay=20, delays=18/0/1.3/0.33, dsn=4.7.1, status=deferred (host imx1.rambler.ru[81.19.66.234] said: 452 4.7.1 Try again later (in reply to DATA command))
+Jul 10 10:35:53 srv24-s-st postfix/qmgr[3043]: 74A3FDF0502: from=<krasteplokomplekt@yandex.ru>, size=617938, nrcpt=1 (queue active)
+Jul 10 10:35:56 srv24-s-st postfix/smtp[22705]: 74A3FDF0502: to=<arsez24@rambler.ru>, relay=imx1.rambler.ru[81.19.66.235]:25, delay=1584, delays=1581/0/0.34/2.5, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as B0115FA7DE2)
+Jul 10 10:35:56 srv24-s-st postfix/qmgr[3043]: 74A3FDF0502: removed
+
+Jul 10 10:09:25 srv24-s-st postfix/smtpd[10285]: 5F4A4DF04FA: client=unknown[178.209.107.114], sasl_method=CRAM-MD5, sasl_username=roman@skgsk.ru
+Jul 10 10:09:25 srv24-s-st postfix/cleanup[6537]: 5F4A4DF04FA: message-id=<921240155.20120710100852@skgsk.ru>
+Jul 10 10:09:31 srv24-s-st postfix/qmgr[3043]: 5F4A4DF04FA: from=<roman@skgsk.ru>, size=6909712, nrcpt=1 (queue active)
+Jul 10 10:09:31 srv24-s-st postfix/smtp[22621]: 5F4A4DF04FA: to=<malkina@pkdt.ru>, relay=pkdt.ru[89.253.247.177]:25, delay=6.2, delays=5.8/0/0.38/0.04, dsn=4.0.0, status=deferred (host pkdt.ru[89.253.247.177] said: 451 temporary failure (#4.3.0) (in reply to RCPT TO command))
+Jul 10 10:35:53 srv24-s-st postfix/qmgr[3043]: 5F4A4DF04FA: from=<roman@skgsk.ru>, size=6909712, nrcpt=1 (queue active)
+Jul 10 10:35:56 srv24-s-st postfix/smtp[22675]: 5F4A4DF04FA: to=<malkina@pkdt.ru>, relay=pkdt.ru[89.253.247.177]:25, delay=1591, delays=1588/0/0.14/3.3, dsn=2.0.0, status=sent (250 ok 1341902125 qp 32188)
+Jul 10 10:35:56 srv24-s-st postfix/qmgr[3043]: 5F4A4DF04FA: removed
+
+Jul 10 10:09:10 srv24-s-st postfix/smtpd[27068]: 451CEDF04EB: client=unknown[213.87.122.107], sasl_method=LOGIN, sasl_username=manager30@moda-milena.ru
+Jul 10 10:09:13 srv24-s-st postfix/cleanup[6471]: 451CEDF04EB: message-id=<20120710060910.451CEDF04EB@smtp.jino.ru>
+Jul 10 10:09:29 srv24-s-st postfix/qmgr[3043]: 451CEDF04EB: from=<krasteplokomplekt@yandex.ru>, size=617934, nrcpt=1 (queue active)
+Jul 10 10:09:30 srv24-s-st postfix/smtp[6782]: 451CEDF04EB: host imx1.rambler.ru[81.19.66.234] said: 452 4.7.1 Try again later (in reply to DATA command)
+Jul 10 10:09:30 srv24-s-st postfix/smtp[6782]: 451CEDF04EB: to=<arsez@rambler.ru>, relay=imx1.rambler.ru[81.19.66.235]:25, delay=22, delays=20/0/1/0.33, dsn=4.7.1, status=deferred (host imx1.rambler.ru[81.19.66.235] said: 452 4.7.1 Try again later (in reply to DATA command))
+Jul 10 10:35:53 srv24-s-st postfix/qmgr[3043]: 451CEDF04EB: from=<krasteplokomplekt@yandex.ru>, size=617934, nrcpt=1 (queue active)
+Jul 10 10:35:59 srv24-s-st postfix/smtp[22673]: 451CEDF04EB: to=<arsez@rambler.ru>, relay=imx1.rambler.ru[81.19.66.234]:25, delay=1610, delays=1604/0.02/0.34/5.5, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as E599CBAE74C)
+Jul 10 10:35:59 srv24-s-st postfix/qmgr[3043]: 451CEDF04EB: removed
