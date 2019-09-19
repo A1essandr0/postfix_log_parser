@@ -11,5 +11,5 @@ patterns = {'mail_id': re.compile(r'postfix\/\w{3,7}\[\d{3,6}\]: ([0-9A-F]{11}):
             'wrong_to': ''
 }
 
-log_filename = "maillog"
-senders_filename = "senders.json"
+if __name__== "__main__":
+    print("This is configuration script and shouldn't be run as standalone")

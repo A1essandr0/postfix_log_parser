@@ -1,5 +1,5 @@
 import unittest
-from postfix_mail_parser import parse_postfix_log
+from postfixlogparser import parse_postfix_log
 from config import patterns
 
 class TestPostfixParser(unittest.TestCase):
