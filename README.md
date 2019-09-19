@@ -1,1 +1,3 @@
-# Simple parser for Postfix log files
+# Parser for Postfix log files
+
+Collects sent email delivery data and puts it to nice json
