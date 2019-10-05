@@ -1,0 +1,2 @@
+graft test_fixtures
+global-exclude *.pyc
